@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container" id="container">
+    
+    <div class="form-container " *ngIf="showLogin">
+        <form #userSignup="ngForm"(ngSubmit)="signUp(userSignup.value)"> 
+        <h1>Create Account</h1>
+        <p class="message">{{SignUpError}}</p>
+        <p class="message1">{{SignUpEmptyError}}</p>
+        <p class="message1">{{signUpcharacterError}}</p>
+        <div class="social-icons">
+        <a><i class="fa-brands fa-google"></i> </a> 
+        <a><i class="fa-brands fa-facebook"></i> </a> 
+        <a><i class="fa-brands fa-github"></i> </a> 
+        <a><i class="fa-brands fa-linkedin"></i> </a> 
+        </div>
+
+        <span>Or use your email  for registration</span> 
+        <input type="text" placeholder="Name" name="name"  ngModel>
+        <input type="text" placeholder="Email" name="email" ngModel>
+        <input type="password" placeholder="Password" name="password" ngModel>
+        <input type="submit" value="Signup" class="submit-btn" >
+        <a class="auth-toogle-link" (click)="openLogin()" >Already have an account?<span> Login</span></a>
+       
+    
+    </form>
+    </div>
+    <div class="form-container " *ngIf="!showLogin" >
+      
+        <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+      
+            <h1>Log In</h1>
+            <p class="message">{{LoginError}}</p>
+            <p class="message1">{{LoginEmptyError}}</p>
+            <p class="message1">{{logincharacterError}}</p>
+
+            <div class="social-icons">
+                <a><i class="fa-brands fa-google"></i> </a> 
+                <a><i class="fa-brands fa-facebook"></i> </a> 
+                <a><i class="fa-brands fa-github"></i> </a> 
+                <a><i class="fa-brands fa-linkedin"></i> </a> 
+            </div>
+            <span>Or use your email or password </span> 
+            <input type="text" placeholder="Email" name="email" ngModel>
+            <input type="password" placeholder="Password" name="password" ngModel>
+            <input type="submit" value="Login" class="submit-btn" >
+            <a class="auth-toogle-link" (click)="openSignup()" >Don't have an account?<span> Signup</span></a>
+
+        
+        </form>
+    </div>
+   
+
+
+
+</div>
+</body>
+</html>

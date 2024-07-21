@@ -1,0 +1,161 @@
+
+.main{
+  
+    width: 800px;
+margin-top:50px ;
+margin-bottom:80px ;
+margin-left:-12vh;
+}
+
+.product-img{
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    margin: -10px -10%;
+}
+.product-color{
+    border:3px solid #000 ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.btn {
+    position: relative;
+    width: 105px;
+    padding: 4px 0px;
+    text-align: center;
+  
+    font-weight: bold;
+    margin: 30px 12px;
+    right: 19px;
+    border: none;
+    box-shadow: 0px 0px 15px #999595;
+    background: #ffffff;
+    color: #1f1f1f;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px; /* Set a value for border-radius, e.g., 2px */
+    transition: background-color 0.5s, color 0.5s; /* Add a transition for smoother effect */
+  }
+  
+  .btn span {
+   
+ 
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    
+    color: #8a8686;
+    background-color: transparent; /* Change the background-color on hover to what you prefer */
+    background: #4b4747;
+  }
+  
+  .btn:hover span {
+    width: 100%;
+  }
+  
+  .quantity-group{
+    margin-top: 20px;
+
+  }
+  .quantity-group button{
+   padding: 9px;
+   border-radius: 73px;
+   
+
+  }
+  .quantity-group input{
+    padding: 5px;
+    width: 30px;
+    border-radius: 8px;
+    border: none;
+ 
+   }
+    .header{
+      margin-top: 43%;
+    }
+    .scrollable-container {
+
+        display: flex;
+        overflow-x: auto;
+     
+      
+  
+    }
+    
+    
+    .item_card {
+      flex: 0 0 300px; /* Fixed width for each item, adjust as needed */
+      margin-right: 10px; /* Adjust as needed for spacing between items */
+   
+    width: 370vh;
+    text-align: center;
+    background-color: #ffffff;
+    
+   height: 60vh;
+   box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    margin:80px 10px;
+    border-radius: 11px;
+    border: none;
+    
+    
+}
+
+.item_card .item_image{
+    max-width: 100%;
+    max-height: 100%;
+  
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    background: transparent;
+    overflow: hidden;
+    
+}
+
+.item_card .item_image img{
+    max-width: 100%;
+    max-height: 40vh;
+  
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    background: transparent;
+    overflow: hidden;
+}
+
+.item_card .item_image:hover {
+   position: relative;
+    transform: scale(1.1);
+}
+
+ 
+
+.item_card .item_info h2{
+    width: 100%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #000000;
+}
+.item_card .item_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+ color: rgb(0, 0, 0);
+}
+
+ .item_info h3{  /* the price that u see on thescreen*/
+    text-align: center;
+    margin-top: 10px;
+    color: #0e0e0e;
+}
+
+.Status{
+  width: 50%;
+  font-weight: bold;
+}

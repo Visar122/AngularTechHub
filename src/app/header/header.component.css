@@ -1,0 +1,343 @@
+.container{
+
+  width: 200px;
+     position: absolute;
+ 
+     margin-top:2.5%;
+    
+    
+     
+ }
+ @media (max-width: 768px) {
+   .container {
+     width: 200px; /* Narrower sidebar for smaller screens */
+     /* You can also adjust other styles as needed for smaller screens */
+   }
+ }
+ 
+ .navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left:0;
+  background: white;
+  box-shadow: 0 0 7px rgb(234, 212, 42);
+  padding:0px 19px;
+  z-index: 1;
+}
+
+  .Logo .Title{
+    font-size: 20px;
+    font-weight: 530;
+    color: #000; /* Adjust the color as needed */
+    margin-left: -515%; 
+    margin-top :19%; 
+  }
+
+.Logo img{
+  width: 79px;
+  cursor: pointer;
+  margin :-16% -392% ; 
+  position: relative;
+ 
+  margin-top :-89%; 
+
+}
+
+.navbar ul {
+
+  list-style: none;
+  align-items: center;
+  margin-left:-62.6% ;
+  
+}
+.navbar ul li{
+  display: inline-block;
+  margin:0 22px;
+  margin-top: 4.2%;
+  padding: 0px 0px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16.2px;
+transition: 0.1s;
+font-weight: 550;
+}
+.navbar ul li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  transition: 0.2s linear;
+
+}
+.navbar ul li a:hover::after{
+  width: 100%;
+}
+.navbar ul li a:hover{
+  color: #fac031;
+}
+ .navbar .icon {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  left: 80%;
+  margin :32%  10% ; 
+  position: absolute;
+ 
+}
+
+.navbar .icon i{
+  font-size:18.4px;
+  color: black;
+  margin:0 5px;
+  cursor:pointer;
+  transition :0.3s;
+
+
+}
+.navbar .icon i:hover{
+  color: #fac031
+}
+.navbar .icon span{
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: #f0f0f0;
+  position: absolute;
+  top: -12px;
+  width: 28px;
+  padding: 0px 10px;
+  left: 91%;
+  transition: 0.5s;
+
+}
+
+ .text{
+   margin-left: 20%;
+ }
+ .Wishlistquantity{
+  background-color: red;
+  border-radius: 50%;
+
+  color: #f0f0f0;
+  position: absolute;
+  top: 12px;
+  width: 128px;
+  padding: 0px 10px;
+  left: 21%;
+  transition: 0.5s;
+ }
+ 
+ .Ønskelist{
+  margin: 0px 20px;
+ }
+ 
+ .kurv{
+  margin-left: -12%;
+ }
+ .kurv span{
+  margin-left: 5%;
+ }
+ .sidebar {
+     width: 60px;
+     left: 0; /* Add this line to align the sidebar to the left */
+     height: 100vh;
+     box-sizing: border-box;
+     padding: 10px;
+     background-color: #ffffff;
+     transition: ease-in-out 0.3s;
+     color: black;
+     font-family: sans-serif;
+     font-size: 8px;
+     z-index: 2; 
+     position: fixed; /* Use fixed positioning to overlay on other components */
+     box-shadow: 0 0 1px rgb(161, 160, 160);
+    
+    
+   }
+  
+   .sidebar:hover{
+     width: 200px;
+ 
+   }
+  
+ 
+   .sidebar:hover>.item>.text{
+     opacity: 1;
+     font-size: 16px;
+ 
+   }
+  
+ 
+   hr{
+     height: 1px;
+     color: #919191;
+     margin: 10px 0;
+   }
+ 
+   .item {
+     display: flex;
+     align-items: center;
+     margin: 60px 0;
+     
+     white-space: nowrap;
+     color: black;
+     font-size: 17px;
+     color: black !important;
+     cursor: pointer;
+   }
+   .item .text {
+     opacity: 0;
+     transition: ease-in-out 0.3s;
+     transition-delay: 0.2s;
+     margin-left: 15px;
+     white-space: nowrap;
+     font-weight: 550;
+
+   }
+   .text p{
+color:black; 
+margin: 15%;
+margin-top: -67%;
+ margin-left: 35px;
+ font-size:18px ;
+ cursor: pointer;
+   }
+ 
+ .text p::after {
+  content: ''; /* Add an empty content property */
+  display: block; /* Make the pseudo-element a block-level element */
+  border-bottom: 2px solid  #fac031;
+  position: absolute; /* Position the pseudo-element relative to its containing block */
+  bottom: 10px; /* Adjust the distance from the text */
+  width: 11%; /* Make the line span the entire width of the container */
+  margin-left: 5.5% ;
+}
+ 
+ .nav-search{
+    
+     display:flex;
+     position: fixed;
+     margin-left: 31vw; /* Use viewport width units */
+  margin-top: -19.5%; /* Use viewport height units */
+         border: none;
+   
+     justify-content: space-between;
+     position:fixed;
+     background: white;
+     color: black;
+     height: 33px;
+     border: none;
+     border-radius: 9px;
+     background: #ffffff;
+     box-shadow:  1px 1px 2px #d9d9d9,
+                  -1px -1px 2px #ffffff;
+
+                
+ 
+    
+    
+ }
+ 
+ .nav-search input{
+ 
+      width: 680px;
+     
+      border: 1px solid rgb(212, 208, 208);
+     height: 32.5px;
+     
+     background: transparent;
+      
+      color: black;
+       border-radius: 9px;
+      
+      border-right: none;
+    
+ }
+ .nav-search input::placeholder{
+   color: black;
+ }
+ .nav-search button{
+  width: 43px;
+     color: black;
+     border: 2px solid rgb(160, 158, 158);
+     height: 33px;
+      cursor: pointer;
+     background: transparent;
+     
+     border-top: none;
+     border-left:none ;
+     border-bottom: none;
+    transition: 0.3s;
+    border-radius:12px ;
+     
+    
+ }
+ .default-case {
+  margin-top: -9.5%;
+}
+
+ .close{
+  
+   border-right:none ;
+ 
+ }
+ .nav-search button:hover{
+   background-color: #e2e4e5;
+   width: 55px;
+ }
+
+ 
+ .fa-arrow-right-from-bracket {
+   transform: rotate(180deg); /* Rotate the logut arrow to the right */
+ }
+ 
+ ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-bottom: 10px; /* Adjust as needed */
+}
+.active{
+  box-shadow: 2px 2px 7px #06070770;
+  background-color: rgb(255, 255, 255);
+    border-radius:30px;
+  text-align: center;
+padding: 9px;
+  width: 59px;
+
+  
+
+
+}
+.Search{
+  position:absolute;
+  top: 40px;
+  z-index: 10;
+  display: list-item;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  width: 300px;
+
+}
+.Search li{
+  padding: 5px;
+  
+}
+.Search li a{
+cursor: pointer;
+}
+.Search li:hover{
+  padding: 5px;
+  background-color: #f1efef;
+  
+}

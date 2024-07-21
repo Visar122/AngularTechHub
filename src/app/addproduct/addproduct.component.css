@@ -1,0 +1,262 @@
+html {
+    scroll-behavior: smooth;
+    
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body{
+    width: 500vh;
+   
+  }
+  .btn {
+    position: relative;
+    width: 195px;
+    padding: 14px 0px;
+    text-align: center;
+  
+    font-weight: bold;
+    margin: 30px 1px;
+    margin-left: 9px;
+    border: none;
+    box-shadow: 0px 0px 15px #201f1f;
+    background: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px; /* Set a value for border-radius, e.g., 2px */
+    transition: background-color 0.5s, color 0.5s; /* Add a transition for smoother effect */
+  }
+  
+  .btn span {
+    background: #ffffff;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    color: #1f1f1f;
+    background-color: transparent; /* Change the background-color on hover to what you prefer */
+  }
+  
+  .btn:hover span {
+    width: 100%;
+  }
+  
+
+
+
+  h1 {
+    color: rgb(0, 0, 0);
+    margin-top: 8%;
+    font-size: 35px;
+    font-weight: 800;
+  }
+  
+
+  .flex-container {
+    width: 104vw;
+    height: 96vh;
+  background: black;
+  background: url('src/assets/Background.jpg') ;
+    margin-top: 3%;
+  margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito',sans-serif;
+    position:absolute;
+
+  }
+  
+  .content-container {
+    width: 500px;
+    height: 300px;
+    
+  } 
+
+  
+
+  .add-product {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 400px;
+    height: 822px;
+      left: 66.1%;
+    margin-top: -5%;
+    padding-top: 20px;
+  
+    border-radius: 16px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 5px white;
+    background: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.199);
+  }
+
+  
+  .info{
+  
+    position: absolute;
+    
+    align-items: center;
+  
+    width: 528px;
+    height: 16%;
+  
+    margin-top: 3%;
+    margin-right:32%;
+    padding-top: 12px;
+  
+    border-radius: 19px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+  
+  
+ 
+
+  }
+  .main_text{
+    position: relative;
+    right: 120%;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     /* Adjust background color and opacity as needed */
+    padding: 10px; /* Adjust padding as needed */
+    top: 188%;
+ 
+  
+    
+}
+
+  .main_text h1{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: 900;
+
+    left: 68%;
+    box-shadow: solid 52px rgb(236, 234, 234);
+    position: relative;
+  }
+  .main_text h1 span{
+    margin-left: 15px;
+    color: #e9ae1a; /* Change the color to your desired value */
+    font-family: 'mv boli'; /* Make sure the font family name is correctly specified */
+    line-height: 52px;
+    font-size: 67px;
+    font-weight: 900;
+    position: relative;
+}
+ .main_image img{
+    width: 700px;
+   position: relative;
+    left: 15%;
+
+    mix-blend-mode:multiply;
+    top: -21%;
+}
+  
+  .subtitle {
+    font-size: 11px;
+  
+    color: rgb(0, 0, 0);
+    
+  }
+  .subtitle  span{
+    font-size: 11px;
+  
+    color: rgb(0, 0, 0);
+    
+  }
+  input {
+    border: none;
+    border-bottom: solid rgb(0, 0, 0) 1px;
+  
+    margin-bottom: 30px;
+    
+  
+    background: none;
+    color: rgb(58, 52, 52);
+  
+    height: 29px;
+    width: 300px;
+    height: 28px;
+
+
+border-radius: 4px;
+background: #ffffff;
+box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+    
+  }
+ .submit-btn {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: 2px 2px 7px #38d39f70;
+
+  background: #38d39f;
+  color: rgba(255, 255, 255, 0.8);
+
+  width: 310px;
+  height: 29px;
+
+  transition: all 1s;
+}
+
+.submit-btn:hover {
+  color: rgb(255, 255, 255);
+  background: #56aa8e;
+  box-shadow: none;
+}
+  .description-input{
+    width: 100%;
+    height: 100px; /* Set the initial height to your desired value */
+    resize: vertical; /* Allow vertical resizing only */
+    color: white;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-family: inherit; /* Use the same font as other form elements */
+    font-size: inherit; /* Use the same font size as other form elements */
+    
+
+
+border-radius: 10px;
+background: #ffffff;
+box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+}
+ 
+
+.message{
+  color:#38d39f;
+}

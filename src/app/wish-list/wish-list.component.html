@@ -1,0 +1,35 @@
+
+<div class="cart-page">
+    <h1>ØnskeList</h1>
+
+ 
+
+    <div class="row " *ngFor="let item of cartItem ;let i=index"> <!-- i is the index of the current item in the cartItem -->
+    
+       
+        <div class="col-sm-8 details">
+         <a routerLink="/details/{{item.cartItemId}}">  <img [src]="item.image" alt=""></a>
+       
+    
+   
+         <h6> Product:{{item.productName}}</h6>
+         <p><b> Price : {{item.price | currency :' Kr'}}</b></p>
+         <p><span>Color: {{item.color}} </span> </p>
+            
+            <p> <span>Category : {{item.category}}</span></p>
+         <p>  {{item.description}}</p>
+    
+         <button   class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+         <br>
+         
+       </div>
+       
+
+ 
+ 
+      
+     
+    </div>
+
+
+</div>

@@ -1,0 +1,259 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<div class="container"> 
+ 
+    <router-outlet></router-outlet>
+  
+
+  
+</div>
+ 
+<div > 
+<div class="navbar"  [ngSwitch]="menuType"> 
+
+  <div class="Logo">
+    <div class="Title">TechHub</div>
+      <img src="../assets/icon1.png">
+      
+  </div>
+
+  <ul> 
+    <li><a href="#Home"> Home </a></li>
+    <li><a href="#About"> About </a></li>
+    <li><a href="#Products"> Products</a></li>
+    <li><a href="#Gallery"> Gallery </a></li>
+ 
+    <li><a routerLink="Order">  Order </a></li>
+   </ul>
+    
+   <div class="icon" >
+       
+  
+    <div class="text" (click)="SearchClick()"  (click)="focusSearchInput()"*ngIf="menuType !== 'seller'">
+      <i class="fa-solid fa-magnifying-glass" ></i>
+     
+    </div>
+      
+  
+  
+
+      
+
+    <div class="Ønskelist" *ngSwitchCase="'Default'"> 
+      <i class="fa-regular fa-heart"></i>
+     </div>
+     
+     <div class="text" *ngIf="isSellerRoute()">
+      <i class="fa-regular fa-user" ></i>
+      <br> <br>
+      <p>{{sellerName|titlecase}}</p>
+    </div>
+        
+         <div class="Ønskelist"  *ngSwitchCase="'user'" routerLink="WishList"> 
+        <a><i class="fa-regular fa-heart"></i> </a>
+        <span class="quantity" >{{wishlistItem}} </span>
+       </div>
+
+ 
+       
+       
+        <div class="kurv" *ngSwitchCase="'Default'"> 
+          <a href="#Home "><i class="fa-solid fa-cart-shopping" > </i>  </a>
+        </div>
+
+        
+      <div class="kurv"  *ngSwitchCase="'user'" routerLink="cart-page" > 
+        <a><i class="fa-solid fa-cart-shopping" > </i>  </a>
+         <span class="quantity" >{{cartItems}} </span>
+      </div>
+      
+       </div>
+
+   </div>
+
+  </div>
+>
+
+<div  [ngSwitch]="menuType" >
+<div class="sidebar" >
+    <div class="item"  style=" cursor:pointer;"style="margin:0px "   > 
+       <img class="icon" src="../assets/icon1.png"   width="40" height="35" >
+
+      <div class="text" >ECOM APP</div>
+ 
+   </div>
+   <hr/>
+   
+<div class="item" routerLink="home" *ngSwitchCase="'Default'"> 
+  <i class="fa-solid fa-house"  routerLinkActive="active"  ></i>
+
+   <div class="text">Home</div>
+  </div>
+   
+
+
+  <!-- Search -->
+<div class="item" *ngIf="menuType !== 'seller'">
+
+     <div class="icon" (click)="Search=true" (click)="focusSearchInput()"  > 
+       <i class="fa-solid fa-magnifying-glass"   >
+       
+       </i>
+     </div>
+
+     <div class="text" >Search</div>
+       
+         <div class="nav-search" *ngIf="isHomeRoute()"  [ngStyle]="{'margin-top': menuType === 'user' ? '-11.5%' : '-21.5%'}" > 
+          <div  *ngIf="Search"> 
+   
+       <input type="text" #searchInput placeholder="Search Products" #myVariable (keyup)="Searchproduct($event)" (blur)="hideSearch()"> <!--(blur)="hideSearch()" makes it so if i click outside it gets removed -->
+       <button (click)="submitSearch(searchInput.value)" > <i class="fa-solid fa-magnifying-glass" style="color:rgb(0, 0, 0)"></i></button>
+       <button class="close" (click)="Search=false;"> <i class="fa-solid fa-xmark" style="color: #ff0000;"></i></button>
+       
+
+       <ul class="Search" *ngIf="searchResult"> 
+        <li *ngFor="let item of searchResult">
+          <a (click)="setSelectedProduct(item)" (mouseover)="setSelectedProduct(item)"  > {{item.productName}}</a>
+    
+        </li>
+       </ul>
+     </div>
+    </div>
+  </div>
+     
+
+<!-- User-Login -->
+<div class="item"  [routerLink]="'user-login'"     *ngSwitchCase="'Default'">
+
+
+  <i class="fa-solid fa-right-to-bracket" routerLinkActive="active"></i>
+
+
+<div class="text">Login</div>
+   
+</div>
+
+<div class="item" routerLink="home" *ngSwitchCase="'user'"> 
+  <i class="fa-solid fa-house"  routerLinkActive="active"  ></i> 
+
+   <div class="text">Home</div>
+  </div>
+   
+<div class="item"  *ngSwitchCase="'user'"  routerLinkActive="active">
+  <i class="fa-regular fa-user" style="color: black;"></i>
+     <br> <br>
+     <div class="text">{{UserName|titlecase}}</div>
+   </div>
+
+   <ul style="font-size:18px; text-decoration: none;font-size: 15px;" *ngSwitchCase="'user'"> 
+     
+
+    <li> <a href="#" style="text-decoration: none; color: black;font-weight: 700;"  routerLink="cart-page"> Cart ({{cartItems}})</a> </li>
+  </ul>
+
+
+
+ <div class="item"  *ngSwitchCase="'user'"  routerLinkActive="active" (click)="logoutUser()"> 
+  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+
+   <div class="text">Log Out</div>
+       
+ 
+  </div>
+
+
+
+
+
+
+
+
+  <div class="item" [routerLink]="'seller-auth'" *ngSwitchCase="'Default'">
+
+ 
+    <i class="fa-regular fa-user"  routerLinkActive="active"></i>
+  
+  
+  <div class="text" >Seller-auth</div>
+  
+  </div>
+
+  
+  
+
+<br>
+<br>
+<div class="item"  *ngSwitchCase="'Default'"  routerLinkActive="active" style="margin: -30px 0px;"> 
+  <i class="fa-regular fa-circle-question"></i>
+
+
+   <div class="text">Hjælp</div> <!-- title case will make the first letter capital -->
+   
+  </div>
+
+
+
+<!-- Seller -->
+
+
+
+
+   
+<div class="item" routerLink="home" *ngSwitchCase="'seller'"> 
+  <i class="fa-solid fa-house"  routerLinkActive="active"  ></i>
+
+   <div class="text">Home</div>
+  </div>
+
+ <div class="item"  [routerLink]="'seller-add-product'"  *ngSwitchCase="'seller'"> 
+  <i class="fa-solid fa-plus"   routerLinkActive="active"></i> 
+
+   <div class="text">Add product</div>
+
+  </div>
+  
+
+  
+ <div class="item" [routerLink]="'seller-home'"  *ngSwitchCase="'seller'"  > 
+  <i class="fa-solid fa-list"routerLinkActive="active"></i>
+
+   <div class="text">List</div>
+  </div>
+  
+
+  
+ <div class="item"  *ngSwitchCase="'seller'"  routerLinkActive="active" (click)="logoutSeller()"> 
+  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+
+   <div class="text">Log Out</div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <div class="item"  *ngSwitchCase="'seller'"  routerLinkActive="active" style="margin: -30px 0px;"> 
+    <i class="fa-regular fa-circle-question"></i>
+  
+  
+     <div class="text">Hjælp</div> <!-- title case will make the first letter capital -->
+     
+    </div>
+  
+
+  <div class="item"  *ngSwitchCase="'seller'"  routerLinkActive="active"> 
+    <i class="fa-regular fa-user"></i>
+  
+  
+     <div class="text">{{sellerName|titlecase}}</div> <!-- title case will make the first letter capital -->
+    </div>
+    
+  
+    
+
+  
+
+ 
+
+</div>
+</div>

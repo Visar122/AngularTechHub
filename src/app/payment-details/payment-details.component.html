@@ -1,0 +1,47 @@
+
+<div class="flex-container" >
+
+  <div class="info">
+  
+
+    </div>
+    <div class="flex-container">
+      <div class="info"></div>
+      <div class="form-container">
+        <div class="add-product">
+          <form #Payment="ngForm" class="common-form" (ngSubmit)="submit(Payment.value)">
+            <div class="PaymentDetail">
+              <h1>Payment</h1>
+              <p class="message">{{ addProductMessage }}</p>
+    
+              <span class="subtitle">Enter Card Name:</span>
+              <br>
+              <input type="text" name="cardOwnerName" placeholder="Card Owner Name" ngModel style="color: black;" required>
+              <br>
+    
+              <span class="subtitle">Enter Card Number:</span>
+              <br>
+              <input type="text" name="cardNumber" placeholder="Card number" ngModel style="color: black;" maxlength="16" required>
+              <br>
+    
+              <span class="subtitle">Enter Expiration Date:</span>
+              <div style="display: flex;">
+                <input type="text" class="form-input" placeholder="MM" name="expiration" style="color: rgb(0, 0, 0);width:40px;" ngModel inputmode="numeric" maxlength="2">
+                <span style="margin: 0 5px;">/</span>
+                <input type="text" class="form-input" placeholder="YY" name="expiration" style="color: rgb(0, 0, 0);width:40px;" ngModel inputmode="numeric" maxlength="2">
+              </div>
+    
+              <span class="subtitle">Enter CVR</span>
+              <br>
+              <input type="text" class="form-input" placeholder="Enter CVR" name="securityCode" ngModel style="color: rgb(15, 12, 12);" maxlength="3" required>
+              <br>
+    
+          
+              <br><br>
+              <input type="submit" value="Pay" class="submit-btn"  (click)=" removeItem()" >
+              <br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>

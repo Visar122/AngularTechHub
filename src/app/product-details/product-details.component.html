@@ -1,0 +1,37 @@
+
+<div class="container"  appBackground>
+  <div class="row main" *ngIf="productData" >  <!-- if product data is not undefined -->
+    <div class="col-sm-6">
+      <img  class="product-img"  src="{{productData.image}}" alt="">
+    </div>
+    <div class="col-sm-6">
+      <div class="details"   >
+          <h1>{{productData.productName}}</h1>
+          <h3>Price : {{productData.price | currency:'Kr'}}</h3>
+         <div>Color: <h3 [style.backgroundColor]="productData.color"  class="product-color"> </h3> </div>
+          <h6>Category :{{productData.category}}</h6>
+          <h6>Description :{{productData.description}}</h6>
+          <div class="Status" [ngStyle]="{color:productData.status === 'På Lager'?'Green':'Red'}"> <h5> {{productData.status}}</h5></div>
+          <button class="btn">Buy Now</button>
+          <button   class="btn" (click)="addToCard()">Add to Cart</button>
+          <button class="btn" style="width: 27px;" ><i class="fa-solid fa-heart" style="margin:0px -20px;color:rgb(0, 0, 0);" (click)="addtoWishlist()"  ></i></button>
+         
+         
+     
+          <div class="quantity-group">
+              <button (click)="handleQuantity('min')"> - </button>      
+              <input type="text" value="{{productQuantity}}">
+              <button (click)="handleQuantity('plus')">+</button>
+          </div>
+      </div>
+         
+   
+    </div>
+
+
+             
+
+          
+     </div>
+    </div>
+

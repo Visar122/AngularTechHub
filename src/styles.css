@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* The global styles defined in this file will be applied across all components and views in your Angular application.*/
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+  
+    
+        
+
+}
+body{
+    font-family: 'sans-serif';
+     background: rgb(255, 255, 255);  /* Adjust the last value for transparency (0 to 1) */
+    z-index: 999; /* Ensure it's above other content */
+    background-size: cover;
+    color: white;
+     
+ 
+}
+
+
+
+.carousel-caption{
+    position: absolute;
+    right: 15%;
+  bottom: 1.25rem;
+  left: 15%;
+  padding-top:1.25rem ;
+  padding-bottom:1.25rem ;
+  color: #fff;
+    text-align: center; /* Center the text inside the carousel caption */
+    background-color: #0000007d;
+    border-radius: 12px;
+}
+.carousel-control-next-icon,.carousel-control-prev-icon{
+  background-color: #000000;
+  border-radius: 8px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div class="flex-container" >
+
+    <div class="info">
+    
+      <div class="main_text">
+     
+        <h1 style=" color: #000000;" >Add <span>Products</span><br> in a Easy Way</h1>
+    </div>
+
+    <div class="main_image">
+  <img src="../assets/product.jpg">
+    </div>
+      </div>
+      <div class="form-container">
+       
+        <div class="add-product">
+
+    <form #addProduct="ngForm" class="common-form" (ngSubmit)="submit(addProduct.value)">
+       
+        <div class="product"> 
+        <h1>Add Product</h1>
+       <p class="message">  {{ addProductMessage}}</p>
+      
+        
+        <span class="subtitle">Enter Product Name:</span>
+        <br>
+        <input type="text" name="productname" placeholder=""  ngModel style="color: black;">
+        
+        <br>
+        <span class="subtitle">Enter Product Price:</span>
+        <br>
+        <br>
+       
+          <input type="text"  class="form-input"  placeholder=" Enter Price:" name="price" ngModel style="color: rgb(20, 18, 18);">
+          <br><br>
+        
+         <span class="subtitle">Enter Product Category:</span>
+         <br>
+          <input type="text"  class="form-input"  placeholder=" Enter  Category" name="category" ngModel style="color: rgb(0, 0, 0);">
+          <br><br>
+
+          <span class="subtitle">Enter Product Color</span>
+          <br>
+          <input type="text" class="form-input" placeholder="Enter  Color" name="color" ngModel style="color: rgb(3, 3, 3);">
+          <br>  <br>
+      
+          <span class="subtitle">Enter Product Description</span>
+         <br>
+         <textarea class="description-input" placeholder="Enter Description" name="description" ngModel style="color: rgb(19, 16, 16);"></textarea>
+          <br>
+        
+          <span class="subtitle">Enter Product Image Url </span>
+          <br>
+          <input type="text" class="form-input" placeholder="Enter Image URL" name="image" ngModel  style="color: rgb(15, 12, 12);">
+
+          <br>
+          <span class="subtitle">Enter Status </span>
+          
+          <br>
+          <input type="text" class="form-input" placeholder="Enter Status" name="status" ngModel  style="color: rgb(15, 12, 12);">
+          
+          <br>
+          <input type="submit" value="Add Product" class="submit-btn"  >
+          <br>
+        </div>
+     
+   
+    </form>
+    
+</div>
+
+</div>
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,19 @@
+<div class="cart-page">
+    <h1>Order Detail</h1>
+
+    <div class="row" *ngFor="let item of cartitems; let i=index">
+        <div class="col-sm-8 details">
+           
+                <img [src]="item.image" alt="" style="cursor: pointer;" routerLink="/details/{{item.cartItemId}}">
+            
+
+            <h6>Product: {{ item.productName }}</h6>
+            <p><b>Price: {{ item.price  }}  DKK</b></p>
+            <p><span>Color: {{ item.color }}</span></p>
+            <p><span>Category: {{ item.category }}</span></p>
+            <p>{{ item.description }}</p>
+        
+            <br>
+        </div>
+    </div>
+</div>

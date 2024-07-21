@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monteserrat',sans-serif;
+}
+body{
+  background: hsl(0, 0%, 0%);
+  background:linear-gradient(to right,#ffffff,#dfdada) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200vh;
+  width: 1050%;
+  margin-top: -61%;
+  margin-left: 93%;
+
+  color: black;
+}
+
+
+  h1 {
+    color: black;
+  
+    font-size: 35px;
+    font-weight: 800;
+  }
+  
+  .flex-container {
+    width: 100vw;
+  
+    margin-top: -55%;
+  margin-left: -9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito',sans-serif;
+    position: fixed;
+
+  }
+  
+  .content-container {
+    width: 500px;
+    height: 340px;
+  }
+  
+  .form-container {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 51vh;
+    height: 595px;
+  
+    margin-top: -3%;
+    margin-right: -42%;
+    padding-top: 20px;
+  
+    border-radius: 36px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+    background: white;
+    box-shadow: 15px 15px 25px 25px rgba(0, 0, 0, 0.199);
+  }
+  
+  .subtitle {
+    font-size: 11px;
+  
+    color: rgba(34, 24, 24, 0.705);
+    
+  }
+  
+  input {
+    border: none;
+    border-bottom: solid rgb(143, 143, 143) 1px;
+  
+    margin-bottom: 30px;
+    
+  
+    background: none;
+    color: rgba(255, 255, 255, 0.555);
+  
+    height: 35px;
+    width: 300px;
+  }
+  
+  .submit-btn {
+    cursor: pointer;
+  
+    border: none;
+
+  
+    box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.3);
+  
+    background:#1A1B27;
+    color: rgba(255, 255, 255, 0.8);
+  
+    width: 100%;
+  
+    transition: all 1s;
+
+    border-radius: 18px;
+  }
+  
+  .submit-btn:hover {
+    color: rgb(255, 255, 255);
+    width: 300px;
+  
+    box-shadow: none;
+   
+  }
+  .auth-toogle-link{
+   
+    font-size: 14px;
+    margin-top:42px;
+    margin: 2px 10px;
+    cursor: pointer;
+  }
+  .auth-toogle-link span{
+   
+    color: #21d4fd;
+  }
+

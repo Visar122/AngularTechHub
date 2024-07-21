@@ -1,0 +1,37 @@
+.container{
+  width: 20vh;
+   margin-top: -6%;
+    margin: 0% -52vh;
+   padding:20vh 162vh;
+
+   color:  rgb(0, 0, 0);
+   background-color: white;
+   height: 120%;
+   
+  
+}
+.container h1{
+    margin: 25px -96vh;
+}
+.search-item{
+   width: 800px;
+   margin: 25px -96vh;
+   border-top: 1px solid #7e7a7a;
+   padding-top:-65px ;
+   right:32%;
+}
+.search-item img{
+   width: 30%;
+   object-fit: contain;
+   height: 250px;
+   background-color: white;
+}
+.search-item h6{
+   font-size: 24px;
+}
+.search-item p{
+   margin-bottom: 5px;
+}
+.search-item span{
+   margin-right: 20px;
+}

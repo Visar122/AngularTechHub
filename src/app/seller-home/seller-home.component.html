@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="product-list">
+    <h1>Added Product List</h1>
+    <p class="message">{{Productmessage}}</p>
+    <table> 
+        <thead >  <!--  it means table head -->
+            <tr>
+                <th></th>
+                <th>Navn </th>
+                <th>Pris </th>
+                <th>Color </th>
+                <th>Category </th>
+                <th>Description </th>
+                <th>Status</th>
+                <th></th>
+                <th></th>
+          
+            </tr>
+           
+        </thead>
+
+        <tbody>   <!-- it means table body  -->
+                <tr *ngFor="let item of productlist2">
+                    <td><img src="{{item.image}}" alt=""></td>
+                  <td>{{item.productName}}</td>
+                  <td>{{item.price |currency:'Kr'}}</td>
+                  <td>{{item.color}}</td>
+                  <td>{{item.category}}</td>
+                  <td>{{item.description}}</td>
+                  <td [ngStyle]="{ color: item.status === 'På Lager' ? 'Green' : 'Red' }"> {{item.status}}</td>
+                  <td><button (click)="deletprodcut(item.id)"><i class="fa-solid fa-trash" style="color: #645e5e;"></i></button></td>
+                  <td ><button routerLink="/update-product/{{item.id}}" style="color: #272727;">Update</button></td><!-- need to add id to app routing also -->
+
+              
+                </tr>
+               
+        </tbody>
+    </table>
+</div>
+    
+</body>
+</html>

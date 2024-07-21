@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black;">
+  
+
+<div class="flex-container" >
+    <div class="content-container" >
+    
+
+ 
+      <div class="form-container">
+
+
+
+<div class="login" > 
+        <form #sellerLogin="ngForm"(ngSubmit)="login(sellerLogin.value)"  class="common-form"> <!-- this takes the data -->
+          <h1>Seller Login</h1>
+          <br>
+          <p style="color:red">{{LoginError}}</p>
+          <p style="color:red">{{LoginEmptyError}}</p>
+          <p style="color:red">{{logincharacterError}}</p>
+          <br>
+          <input type="text"  class="form-input"  placeholder=" Enter Email" name="email" ngModel style="color: black;">
+          <br><br>
+          <br>
+         
+           
+            <span class="subtitle">PASSWORD:</span>
+            <br>
+      
+           
+              <input type="password"  class="form-input"  placeholder=" Enter Password" name="password" ngModel style="color: black;">
+              <br><br>
+            <input type="submit" value="Login" class="submit-btn" >
+            <br>
+ 
+       
+       
+        </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
